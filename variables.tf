@@ -181,9 +181,9 @@ variable "run_trigger_auto_apply" {
   description = "Boolean to automatically apply a Run when triggered."
   default     = false
 
-  validation {
-    condition     = length(var.run_trigger_source_workspaces) < 0 && var.run_trigger_auto_apply == false
-    error_message = "Not configured with upstream workspaces. Configure `run_trigger_source_workspaces` to enable this feature."
+ validation {
+    condition     = var.run_trigger_auto_apply ? length(var.run_trigger_source_workspaces) > 0 : true
+    error_message = "If `run_trigger_auto_apply` is `true`, `run_trigger_source_workspaces` should contain at least one workspace."
   }
 
 }
