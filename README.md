@@ -178,6 +178,18 @@ To add Run Triggers, the `run_trigger_source_workspaces` input variable accepts 
   ]
 ```
 
+To auto-apply run triggers, the following input variable needs to be set. 
+
+```hcl
+    run_trigger_auto_apply = true
+```
+
+To run plan-only triggers, set the variable to `false` or do not specify (default value).
+
+```hcl
+    run_trigger_auto_apply = false
+```
+
 ### Variable Sets
 
 To add the Workspace into one or more already existing Variable Sets, the input variable `variable_set_names` accepts a list of Variable Set names.
