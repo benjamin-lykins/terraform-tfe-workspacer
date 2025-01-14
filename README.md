@@ -320,4 +320,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_workspace_id"></a> [workspace\_id](#output\_workspace\_id) | ID of Workspace. |
+| <a name="output_workspace_name"></a> [workspace\_name](#output\_workspace\_name) | Name of Workspace. |
 <!-- END_TF_DOCS -->
