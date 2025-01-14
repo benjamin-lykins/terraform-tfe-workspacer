@@ -177,15 +177,15 @@ variable "project_name" {
 }
 
 variable "run_trigger_auto_apply" {
-  type = bool
+  type        = bool
   description = "Boolean to automatically apply a Run when triggered."
-  default = false
+  default     = false
 
   validation {
-    condition = length(var.run_trigger_source_workspaces) < 0 && var.run_trigger_auto_apply
+    condition     = length(var.run_trigger_source_workspaces) < 0 && var.run_trigger_auto_apply
     error_message = "Not configured with upstream workspaces. Configure `run_trigger_source_workspaces` to enable this feature."
   }
-  
+
 }
 
 #------------------------------------------------------------------------------
