@@ -182,7 +182,7 @@ variable "run_trigger_auto_apply" {
   default = false
 
   validation {
-    condition = var.run_trigger_source_workspaces == [] ? var.run_trigger_auto_apply == false : true
+    condition = length(var.run_trigger_source_workspaces) > 0 ? var.run_trigger_auto_apply == false : true
     error_message = "Not configured with upstream workspaces. Configure `run_trigger_source_workspaces` to enable this feature."
   }
   
