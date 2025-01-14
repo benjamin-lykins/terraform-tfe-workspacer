@@ -3,7 +3,7 @@ output "workspace_id" {
   description = "ID of Workspace."
 }
 
-output "workspace_names" {
+output "workspace_name" {
   value       = tfe_workspace.ws.name
   description = "Name of Workspace."
 }
